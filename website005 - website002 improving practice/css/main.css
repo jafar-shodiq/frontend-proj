@@ -31,11 +31,8 @@ section {
   padding: 1em;
 }
 
-.navbar-section a {
-  color: var(--white);
-}
-
 .navbar-section .logo {
+  color: var(--white);
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2em;
@@ -56,9 +53,109 @@ section {
   place-content: space-between;
 }
 
+.navbar-section .menu-btn {
+  display: block;
+}
+
 .navbar-section .mobile-menu {
   width: 1em;
   height: 1em;
-  padding-top: 0.3em;
+  padding-top: 0.4em;
+  cursor: pointer;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 50%;
+  right: 0;
+  top: 0;
+  background: white;
+  height: 100vh;
+  padding: 1em;
+}
+
+nav ul.primary-nav {
+  margin-top: 5em;
+}
+
+nav li a {
+  color: var(--black);
+  text-decoration: none;
+  display: block;
+  padding: .5em;
+  font-size: 1.3em;
+  text-align: right;
+}
+
+nav li a:hover {
+  font-weight: bold;
+  color: var(--red);
+}
+
+nav .mobile-menu-exit {
+  width: 1em;
+  height: 1em;
+  float: right;
+  padding-top: 0.4em;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar-section .mobile-menu, .navbar-section .mobile-menu-exit {
+    display: none;
+  }
+  .navbar-section .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 220px auto;
+        grid-template-columns: 220px auto;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  .navbar-section nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar-section nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar-section nav a {
+    color: var(--white);
+    font-size: 1em;
+    padding: .1em .4em;
+  }
+  .navbar-section nav a:hover {
+    color: white;
+  }
+  .navbar-section nav ul.primary-nav {
+    margin: 0;
+  }
+  .navbar-section nav li.current a {
+    font-weight: bold;
+  }
+  .navbar-section nav li.go-premium-cta a {
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    font-weight: bold;
+    border-radius: 5em;
+    margin-top: -.2em;
+  }
+  .navbar-section nav li.go-premium-cta a:hover {
+    background: var(--primary-color);
+    color: white;
+  }
 }
 /*# sourceMappingURL=main.css.map */

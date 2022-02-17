@@ -1,63 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is an awesome website">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <title>Some Arts</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-    <header>
-        <section class="navbar-section">
-            <div class="container">
-                <a href="#" class="logo"><span>Some Arts</span> Website</a>
-                <img id="mobile-cta" class="mobile-menu" src="images/menu-white.png" alt="Open Navigation">
-                <nav>
-                    <ul class="primary-nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                    </ul>
-                    <ul class="secondary-nav">
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Go Premium</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-    </header>
-
-
-    <main>
-        <section class="hero-section">
-            <div class="container">
-                <p class="subhead">You are looking at</p>
-                <h1>Some Arts Sample</h1>
-                <a href="#" class="primary-cta">Cycle color</a>
-            </div>
-        </section>
-        <section class="content-section">
-            <div class="container">
-                <div class="block">
-                    <img src="images/art01.jpg" alt="art01">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This is an awesome website">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <title>Some Arts</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <header>
+            <section class="navbar-section">
+                <div class="container">
+                    <a href="#" class="logo"><span>Some Arts</span> Website</a>
+                    <img id="mobile-cta" class="mobile-menu" src="images/menu-white.png" alt="Open Navigation">
+                    <nav>
+                        <img id="mobile-exit" class="mobile-menu-exit" src="images/menu.png" alt="Close Navigation">
+                        <ul class="primary-nav">
+                            <li class="current"><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                        <ul class="secondary-nav">
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Go Premium</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <div class="block">
-                    <img src="images/art02.jpg" alt="art02">
+            </section>
+        </header>
+
+
+        <main>
+            <section class="hero-section">
+                <div class="container">
+                    <p class="subhead">You are looking at</p>
+                    <h1>Some Arts Sample</h1>
+                    <a href="#" class="primary-cta">Cycle color</a>
                 </div>
-                <div class="block">
-                    <img src="images/art03.jpg" alt="art03">
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <div class="block">
+                        <img src="images/art01.jpg" alt="art01">
+                    </div>
+                    <div class="block">
+                        <img src="images/art02.jpg" alt="art02">
+                    </div>
+                    <div class="block">
+                        <img src="images/art03.jpg" alt="art03">
+                    </div>
                 </div>
+            </section>
+        </main>
+
+
+        <footer class="footer-section">
+            <div class="container">
+                <p>Practice Feb 2022</p>
             </div>
-        </section>
-    </main>
+        </footer>
 
+        <!-- javascript -->
+        <script>
 
-    <footer class="footer-section">
-        <div class="container">
-            <p>Practice Feb 2022</p>
-        </div>
-    </footer>
-</body>
+            const mobileBtn = document.getElementById('mobile-cta')
+                nav = document.querySelector('nav')
+                mobileBtnExit = document.getElementById('mobile-exit');
+
+            mobileBtn.addEventListener('click', () => {
+                nav.classList.add('menu-btn');
+            })
+
+            mobileBtnExit.addEventListener('click', () => {
+                nav.classList.remove('menu-btn');
+            })
+
+        </script>
+    </body>
 </html>
