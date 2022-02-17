@@ -1,1 +1,64 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+:root {
+  --white: #e8e8e8;
+  --red: #f05454;
+  --dark-blue: #30475e;
+  --black: #222831;
+}
+
+body {
+  background: var(--white);
+  margin: 0;
+  font-family: 'Poppins';
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--black);
+}
+
+section {
+  padding: 5em 2em;
+}
+
+.navbar-section {
+  background: var(--black);
+  padding: 1em;
+}
+
+.navbar-section a {
+  color: var(--white);
+}
+
+.navbar-section .logo {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.navbar-section .logo span {
+  color: var(--red);
+}
+
+.navbar-section nav {
+  display: none;
+}
+
+.navbar-section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+}
+
+.navbar-section .mobile-menu {
+  width: 1em;
+  height: 1em;
+  padding-top: 0.3em;
+}
+/*# sourceMappingURL=main.css.map */
